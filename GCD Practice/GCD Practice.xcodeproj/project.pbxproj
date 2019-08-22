@@ -13,6 +13,7 @@
 		22E6D654230E50F100C3D4D8 /* GCD_Practice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22E6D652230E50F100C3D4D8 /* GCD_Practice.xcdatamodeld */; };
 		22E6D656230E50F300C3D4D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E6D655230E50F300C3D4D8 /* Assets.xcassets */; };
 		22E6D659230E50F300C3D4D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E6D657230E50F300C3D4D8 /* LaunchScreen.storyboard */; };
+		22E6D661230E649000C3D4D8 /* ApiAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6D660230E649000C3D4D8 /* ApiAccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		22E6D655230E50F300C3D4D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22E6D658230E50F300C3D4D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22E6D65A230E50F300C3D4D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22E6D660230E649000C3D4D8 /* ApiAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				22E6D652230E50F100C3D4D8 /* GCD_Practice.xcdatamodeld */,
 				22E6D64F230E50F100C3D4D8 /* Main.storyboard */,
 				22E6D64D230E50F100C3D4D8 /* ViewController.swift */,
+				22E6D660230E649000C3D4D8 /* ApiAccess.swift */,
 			);
 			path = "GCD Practice";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				22E6D654230E50F100C3D4D8 /* GCD_Practice.xcdatamodeld in Sources */,
 				22E6D64E230E50F100C3D4D8 /* ViewController.swift in Sources */,
+				22E6D661230E649000C3D4D8 /* ApiAccess.swift in Sources */,
 				22E6D64C230E50F100C3D4D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
