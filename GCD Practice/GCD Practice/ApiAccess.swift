@@ -24,6 +24,7 @@ class DetailInfoProvider {
     
     let downloadGroup: DispatchGroup = DispatchGroup()
     
+    // MARK: GCD Group 時要關掉 didSet
     var dataProvider: [DetailInfo] = []
     {
 
@@ -46,7 +47,7 @@ class DetailInfoProvider {
         }
         
         guard let url = completeUrl.url else { return }
-        
+        // MARK: GCD Group
 //        downloadGroup.enter()
         
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
@@ -86,7 +87,7 @@ class DetailInfoProvider {
                 print ("Decode error!")
                 }
             }
-            
+            // MARK: GCD Group
 //            self.downloadGroup.leave()
             
             if statusCode >= 400 && statusCode < 500 {
@@ -97,7 +98,7 @@ class DetailInfoProvider {
             }
         }
         task.resume()
-        
+        // MARK: GCD Group
 //        downloadGroup.notify(queue: .main) { [weak self] in
 //
 //            self?.detailInfoDelegate?.detailInfoProvider(didGet: self?.dataProvider ?? [])

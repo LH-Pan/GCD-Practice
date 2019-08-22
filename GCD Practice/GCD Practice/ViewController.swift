@@ -32,7 +32,7 @@ class ViewController: UIViewController, DetailInfoProviderDelegate {
         DetailInfoProvider.shared.detailInfoDelegate = self
         
     }
-    
+    // MARK: GCD Group
     @IBAction func groupAPI(_ sender: Any) {
         
         DetailInfoProvider.shared.fetchDetailInfo(for: .fistOffset)
@@ -46,6 +46,7 @@ class ViewController: UIViewController, DetailInfoProviderDelegate {
     
     let queue = DispatchQueue.global()
     
+    // MARK: GCD Semaphore
     @IBAction func semaphoreAPI(_ sender: Any) {
         
         queue.async {[weak self] in
@@ -76,10 +77,18 @@ class ViewController: UIViewController, DetailInfoProviderDelegate {
         }
     }
     
-    
     func detailInfoProvider(didGet result: [DetailInfo]) {
         detaillInfo = result
         
+        // MARK: GCD Group
+//        firstRoadLabel.text = detaillInfo[0].road
+//        firstLimitLabel.text = detaillInfo[0].speedLimit
+//        secondRoadLabel.text = detaillInfo[1].road
+//        secondLimitLabel.text = detaillInfo[1].speedLimit
+//        thirdRoadLabel.text = detaillInfo[2].road
+//        thirdLimitLabel.text = detaillInfo[2].speedLimit
+        
+        // MARK: GCD Semaphore
         queue.async {[weak self] in
             if self?.semaphore.wait(timeout: .distantFuture) == .success {
                 
